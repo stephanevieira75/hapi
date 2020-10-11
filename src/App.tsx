@@ -18,7 +18,7 @@ function App() {
             component={Login}
           />
           <Route // Dashboard
-            path={"/dashboard/"}
+            path={"/dashboard/:id/"}
             exact
             component={Dashboard}
           />
