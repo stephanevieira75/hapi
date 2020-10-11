@@ -1,4 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
+
+1. Clone the repository
+    ```
+    git clone https://github.com/stephanevieira75/hapi.git
+    ```
+2. Go into the project and install project dependencies
+    ``` 
+    cd hapi
+    npm i && yarn install
+    ```
+3. Start the project
+    ```
+    yarn start
+    ```
+4. Log in to dashboard with demo user:
+    ```
+    {
+        username: 'Bret',
+        password: '123',
+    }
+    ```
+5. Enjoy !
 
 ## Available Scripts
 
