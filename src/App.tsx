@@ -23,7 +23,7 @@ function App() {
             component={() => <Dashboard posts />}
           />
           <Route // Dashboard
-            path={"/dashboard/post/:id/"}
+            path={"/dashboard/:user/post/:id/"}
             exact
             component={() => <Dashboard post />}
           />

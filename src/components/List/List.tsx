@@ -11,7 +11,7 @@ function List(props) {
                 <div key={key} className="post">
                     <img src={post.image} alt="this is post" />
                     <div className="container">
-                        <Link to={`/dashboard/post/${post.id}`} className="title">{post.title}</Link>
+                        <Link to={`/dashboard/${props.loggedUser.id}/post/${post.id}`} className="title">{post.title}</Link>
                         <div className="text post-body">{post.body}</div>
                     </div>
                 </div>

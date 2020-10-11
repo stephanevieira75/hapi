@@ -5,12 +5,11 @@ import PostServices from '../../services/PostServices';
 import { Link, useParams } from 'react-router-dom';
 
 function Card(props) {
-    const param = useParams('id');
+    const param = useParams('id', 'user');
     const [post, setPost] = useState({});
-    console.log(param.id)
 
     useEffect(() => {
-        PostServices.getPostById(parseInt(param.id), user => setPost(user))
+        PostServices.getPostById(parseInt(param.id), post => setPost(post))
     },
     [param]);
 
@@ -18,8 +17,8 @@ function Card(props) {
         return (
             <div className="post">
                 <img src={post.image} alt="this is post" />
-                <div >
-                    <Link to={`/dashboard/post/${post.userId}`} className="title">{post.title}</Link>
+                <div>
+                    <h1>{post.title}</h1>
                     <div className="text post-body">{post.body}</div>
                 </div>
             </div>
@@ -27,7 +26,7 @@ function Card(props) {
 
     }
     return <div className="container">
-    <Link to={`/dashboard/${props.loggedUser.id}`}>Back to the list</Link>
+        <Link to={`/dashboard/${param.user}`}>Back to the list</Link>
         {displayPost(post)}
     </div>;
 }

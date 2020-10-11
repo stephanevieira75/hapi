@@ -13,7 +13,7 @@ function Dashboard(props) {
 
     useEffect(() => {
         UserServices.getUserById(parseInt(param.id), user => setLoggedUser(user));
-        PostServices.getPosts().then(posts => setPosts(posts));
+        PostServices.getPosts().then((posts: any) => setPosts(posts));
     },
     [param]);
 
