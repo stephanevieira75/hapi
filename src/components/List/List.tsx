@@ -11,14 +11,17 @@ function List(props) {
                 <div key={key} className="post">
                     <img src={post.image} alt="this is post" />
                     <div className="container">
-                        <Link to={`/dashboard/post/${post.userId}`} className="title">{post.title}</Link>
+                        <Link to={`/dashboard/post/${post.id}`} className="title">{post.title}</Link>
                         <div className="text post-body">{post.body}</div>
                     </div>
                 </div>
             );
         });
     }
-    return <div className="list-container">{displayPostsList(props.posts)}</div>;
+    return <div className="list-container">
+        <h1>Welcome back {props.loggedUser.username || ''}!</h1>
+        {displayPostsList(props.posts)}
+    </div>;
 }
 
 export default List;

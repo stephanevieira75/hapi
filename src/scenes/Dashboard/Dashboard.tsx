@@ -3,6 +3,7 @@ import UserServices from '../../services/UserServices';
 import PostServices from '../../services/PostServices';
 
 import List from '../../components/List/List';
+import Card from '../../components/Card/Card';
 import { useParams } from 'react-router-dom';
 
 function Dashboard(props) {
@@ -18,8 +19,8 @@ function Dashboard(props) {
 
     return (
         <div className="dashboard-container">
-            {props.posts && <List posts={posts} />}
-            {props.post && <div>hello</div>}
+            {props.posts && <List loggedUser={loggedUser} posts={posts} />}
+            {props.post && <Card loggedUser={loggedUser} />}
         </div>
     );
 }
