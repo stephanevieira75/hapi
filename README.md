@@ -7,7 +7,7 @@
 2. Go into the project and install project dependencies
     ``` 
     cd hapi
-    npm i && yarn install
+    yarn install
     ```
 3. Start the project
     ```
