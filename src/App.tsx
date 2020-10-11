@@ -20,7 +20,12 @@ function App() {
           <Route // Dashboard
             path={"/dashboard/:id/"}
             exact
-            component={Dashboard}
+            component={() => <Dashboard posts />}
+          />
+          <Route // Dashboard
+            path={"/dashboard/post/:id/"}
+            exact
+            component={() => <Dashboard post />}
           />
           <Route // Redirect
             path={"*"}

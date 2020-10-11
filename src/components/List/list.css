@@ -1,0 +1,25 @@
+.list-container {
+    width: 100%;
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    min-height: 100px;
+    color: #282828;
+    background-color: #fafafa;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.1));
+    margin: 16px 0;
+    padding: 5px;
+}
+
+.container {
+    margin-left: 25px;
+}
+
+.post-body {
+    min-height: 80px;
+    display: flex;
+    justify-content: flex-start;
+}
